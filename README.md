@@ -1,5 +1,9 @@
 # 🎬 Movie Recommendation System
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://movie-recommendation-system-niypzgljuxxyazeiamdn5s.streamlit.app/)
+
+An end-to-end movie recommendation system built on the **MovieLens 25M** dataset.
+
 An end-to-end movie recommendation system built on the **MovieLens 25M** dataset. Compares multiple recommendation approaches — from simple popularity baselines to collaborative filtering — with a strict temporal evaluation protocol that prevents data leakage.
 
 **This is not a notebook with cosine similarity.** It's a production-style ML project with modular code, a FastAPI service, a Streamlit demo, and rigorous evaluation.
