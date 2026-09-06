@@ -1,10 +1,13 @@
-# Data (too large for git)
+# Data (raw + full processed too large for git)
 data/raw/
-data/processed/
-data/dev/
+data/processed/train.parquet
+data/processed/val.parquet
+data/processed/test.parquet
 
-# Trained models and artifacts
-artifacts/
+# Keep these for deployment
+# data/dev/ — allowed
+# data/processed/movies_clean.parquet — allowed
+# artifacts/id_mappings.pkl — allowed
 
 # Python
 __pycache__/
