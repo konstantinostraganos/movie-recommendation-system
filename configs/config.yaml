@@ -1,0 +1,65 @@
+# ============================================================
+# Movie Recommendation System — Configuration
+# ============================================================
+# Single source of truth for all parameters.
+# Every script/module reads from here via src/utils/config.py.
+# ============================================================
+
+project:
+  name: "movie-recommendation-system"
+  seed: 42
+  version: "0.1.0"
+
+paths:
+  raw_data: "data/raw/ml-25m"
+  processed_data: "data/processed"
+  dev_data: "data/dev"
+  artifacts: "artifacts"
+
+data:
+  # MovieLens 25M download URL
+  source_url: "https://files.grouplens.org/datasets/movielens/ml-25m.zip"
+
+  # Minimum thresholds for filtering (iterative)
+  min_ratings_per_user: 20
+  min_ratings_per_movie: 5
+
+  # Development subset: fraction of users to sample
+  dev_user_fraction: 0.10
+
+evaluation:
+  # Rating threshold to consider an interaction "relevant"
+  relevance_threshold: 4.0
+
+  # Top-K for ranking metrics
+  k: 10
+
+  # Number of negative samples per positive in sampled evaluation
+  num_negatives: 99
+
+  # Temporal split: how many recent ratings to hold out per user
+  test_holdout: 1     # last rating  -> test
+  val_holdout: 1      # 2nd-to-last  -> validation
+
+models:
+  # SVD (Surprise)
+  svd:
+    n_factors: 100
+    n_epochs: 20
+    lr_all: 0.005
+    reg_all: 0.02
+
+  # ALS (implicit)
+  als:
+    factors: 100
+    iterations: 15
+    regularization: 0.01
+
+  # Content-based
+  content:
+    tfidf_max_features: 5000
+    embedding_model: "all-MiniLM-L6-v2"
+
+  # Hybrid
+  hybrid:
+    cold_start_threshold: 5   # users with < N train ratings get content-based

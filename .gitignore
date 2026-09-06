@@ -1,0 +1,33 @@
+# Data (too large for git)
+data/raw/
+data/processed/
+data/dev/
+
+# Trained models and artifacts
+artifacts/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environment
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
