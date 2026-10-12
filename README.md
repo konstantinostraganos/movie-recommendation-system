@@ -159,7 +159,7 @@ movie-recommendation-system/
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/movie-recommendation-system.git
+git clone https://github.com/konstantinostraganos/movie-recommendation-system.git
 cd movie-recommendation-system
 python -m venv venv
 venv\Scripts\activate        # Windows
